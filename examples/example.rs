@@ -1,5 +1,6 @@
 /* ~this is compilable rust code~
 #nickel.rs
+[![Build Status](https://travis-ci.org/nickel-org/nickel.rs.png?branch=master)](https://travis-ci.org/nickel-org/nickel.rs)
 
 nickel is supposed to be a simple and lightweight foundation for web applications written in Rust. It's API is inspired by the popular express framework for JavaScript.
 
@@ -13,38 +14,27 @@ Some of the features are:
 * middleware
     * static file support
 
-
-### Status
-[![Build Status](https://travis-ci.org/nickel-org/nickel.rs.png?branch=master)](https://travis-ci.org/nickel-org/nickel.rs)
-
 ##[Jump to the nickel.rs website](http://nickel.rs)
 
 #Getting started
-The easiest way to get started is to get the example running and play around with it. Let's do that real quick!
-
-##Clone the repository
+The easiest way to get started is to run the example and playing around with it. Let's do that real quick with Cargo!
 
 ```shell
-git clone --recursive https://github.com/nickel-org/nickel.git
+git clone https://github.com/nickel-org/nickel.git
+cd nickel
+cargo test
 ```
 
-##Build nickel
+`cargo test` will build all the examples, so to run the main example just run:
 
 ```shell
-make all
+target/example
 ```
 
-##Run the example
-
-```shell
-make run
-```
-
-Then try `localhost:6767/user/4711` and `localhost:6767/bar`
-
+Then try connecting to `localhost:6767/user/4711` or `localhost:6767/bar`!
 
 ##Take a look at the example code
-Here is how sample server in `example.rs` looks like: */ */
+Here is the main code for the sample server in `example.rs`: */ */
 
     extern crate serialize;
     extern crate nickel;
@@ -176,6 +166,6 @@ There is list of [open issues](https://github.com/nickel-org/nickel/issues?state
 
 If you need a helping hand reach out to [@cburgdorf](https://github.com/cburgdorf), [@Ryman](https://github.com/Ryman) or [@SimonPersson](https://github.com/SimonPersson).
 
-Make sure to follow this [commit message convention](https://github.com/ajoslin/conventional-changelog/blob/master/CONVENTIONS.md) because we will auto generate a changelog with [clog](https://github.com/thoughtram/clog) in the future.
+Please follow this [commit message convention](https://github.com/ajoslin/conventional-changelog/blob/master/CONVENTIONS.md) because we will auto-generate a changelog with [clog](https://github.com/thoughtram/clog) in the future.
 
 And hey, did you know you can also contribute by just starring the project here on github :) */
